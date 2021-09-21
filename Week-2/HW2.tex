@@ -1,12 +1,143 @@
-\documentclass[12pt, letterpaper]{article}
+\documentclass[12pt, letterpaper, twocolumn]{article}
 
 %packages
+\usepackage{lipsum}
+%generate dummy texts.
+\usepackage{imakeidx}
+\usepackage{hyperref} %to reference sections in a lookup table.
+\usepackage{multicol}
+\usepackage [ 
+    a4 paper ,
+    hmargin=1in , 
+    vmargin =1.5in
+ ]{geometry}
+% \setcounter{tocdepth}{2}
+\usepackage{color}
+
+
+\usepackage{ fancyhdr }
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\leftmark}
+\rhead{\rightmark}
+\lfoot{Prateek Garg}
+\rfoot{Page \thepage}
+\renewcommand{\footrulewidth}{1 pt}
+
+\renewcommand{\subsectionmark}[1]{\markright{\ #1}}
+\makeindex[ columns = 1, title = DOcIndeX, intoc]
+
+\setlength{\columnseprule}{1pt}
+\def\columnseprulecolor{\color{blue}}
 
 
 \begin{document}
+
+%\newgeometry{ left = 1.5in , right =0.5in , top=1in , bottom=1.5in }
+
     \title{\LaTeX2}
     \author{Prateek Garg}
     \maketitle
-
+%    \setcounter{tocdepth}{2}
+    \tableofcontents
+%    \newpage
+    \thispagestyle{empty}
+    \clearpage
+    \pagenumbering{arabic}
+    \section{start}
+    \subsection{Lessgo}
+        \label{declaration -demo}
+        This is second subsection. we will see what happens.
+        \newpage       
+        \subsubsection{Sublessgo}
+        \label{Sample}
+        what's up? apart from ceiling \index{ceiling}. No not sky. it's your brains. But oh well.
+        \vspace{2.5em}
+        \subsubsection{lessgo 1..2..3}
+        \label{woohoo}
+        lets see.
+%\restoregeometry
+        \newpage
+        \section{it's not the end}
     
-\end{document}
+        \subsection{we'll}
+        \label{declaration -demo1}
+        This is second subsection. we will see what happens. \LaTeX{}\index{\LaTeX} now we start looking for
+         foootnotes \index{foootnotes}. \footnote{Here's first.} But you know what we should
+          do this other way \footnotemark , degvdfvdfvcdc \index{\LaTeX!degvdfvdfvcdc} .
+        
+          \footnotetext{Here's second}
+          hehe ejnsdjk xc xcn c ohsdvbsdhv \footnotemark .l mklfjfnjvnfouyb
+          uosdduyoxcvohbxcvbdpd
+          kln;lnb'nbjljcvnbc
+          bklbv
+          bljvnbc
+          b
+          bkxdbc
+          vbjcvbvjnbcv
+          \footnotetext{ did this worked?}
+        
+          \newpage
+        \subsubsection{Sublessgo2}
+        \label{Sample2}
+        what's up? apart our brains \footnotemark[\value{footnote}]. But oh well. \footnotemark[1].
+
+    \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+    %    \addtocontents{toc}        {\setcounter{tocdepth}{3}}    
+        \subsubsection{les2}
+        \label{wooh}
+        lets see \footnote{ change of symbol} again. dchdsbchsbdchsd
+
+        how is ti tgoing ?dcsdjcnsdn
+        ckdscklkd\footnote{ change of symbol2}nsc
+        dlvfkvs
+
+        \renewcommand{\thefootnote}{\roman{footnote}}
+        lets see \footnote{ change of symbol} again. dchdsbchsbdchsd
+
+        how is ti tgoing ?dcsdjcnsdn
+        ckdscklkd\footnote{ change of symbol2}nsc
+        dlvfkvs
+        
+        \renewcommand{\thefootnote}{\Roman{footnote}}
+        lets see \footnote{ change of symbol} again. dchdsbchsbdchsd
+
+        how is ti tgoing ?dcsdjcnsdn
+        ckdscklkd\footnote{ change of symbol2}nsc
+        dlvfkvs
+
+        \renewcommand{\thefootnote}{\arabic{footnote}}
+        lets see \footnote{ change of symbol} again. dchdsbchsbdchsd
+
+        how is ti tgoing ?dcsdjcnsdn
+        ckdscklkd\footnote{ change of symbol2}nsc
+        dlvfkvs
+
+        \renewcommand{\thefootnote}{\alph{footnote}}
+        lets see \footnote{ change of symbol} again. dchdsbchsbdchsd
+
+        how is ti tgoing ?dcsdjcnsdn
+        ckdscklkd\footnote{ change of symbol2}nsc
+        dlvfkvs
+
+        \renewcommand{\thefootnote}{\Alph{footnote}}
+        lets see \footnote{ change of symbol} again. dchdsbchsbdchsd
+
+        how is ti tgoing ?dcsdjcnsdn
+        ckdscklkd\footnote{ change of symbol2}nsc
+        dlvfkvs
+
+        \newpage       
+    %    \addcontentsline{toc}   {\setcounter{tocdepth}{2}}
+    
+    \begin{multicols}{4}
+    [
+        \subsubsection{Multicol Sample}
+        Here we genrerte gibberish.
+    ]
+    \lipsum[2]
+    \end{multicols}
+
+    \printindex
+    \end{document}
