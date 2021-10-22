@@ -3,79 +3,73 @@
 % Author : Prateek Garg
 %------------------------
 
-\documentclass[12pt, letterpaper]{article}
-\usepackage [ 
-    a4 paper ,
-    hmargin=1in , 
-    vmargin =1.5in
- ]{geometry}
-
-
+\documentclass{article}
+\usepackage[a4paper,bottom=0.6in,left=0.75in,right=0.75in,top=0.6in]{geometry}
 \usepackage{titlesec} 
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
 \usepackage{color}
 \usepackage{ragged2e}
-\usepackage{lipsum}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
+\usepackage{tabularx}
+\definecolor{mycolor}{RGB}{100,149,240}
 
-\definecolor{mycolor}{RGB}{100,149,237}
+\newcommand{\xfill}[2][1ex]{
+	\dimen0=#2\advance\dimen0 by #1
+	\leaders\hrule height \dimen0 depth -#1\hfill
+}
 
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{
-    {\bfseries
-        Prateek Garg \\ %Name
-        Electrical Engineering \\ %Departement
-        Dual Degree[ B.tech + M.tech ] \\ %Program
-        Minor in Computer Science and Engineering \\ %optional Minor
-        Indian Institute of Technology Bombay \\ %Institute
-    }
-}
-\rhead{
-    {\bfseries
-        20D070060 \\ %Roll number
-        UG Second Year \\ %Current Academic Year
-        Male \\ %Gender
-        March 30th 2002 \\ %DOB
-        CPI: 8.36 \\ %Oh well
-    }
-}
 \setlength{\headheight}{90pt}
 \renewcommand{\headrulewidth}{1.5 pt}
 \renewcommand{\footrulewidth}{0 pt}
 
-\titleformat{\section}{\normalfont\scshape\Large\bfseries\color{mycolor}}{\thesection}{0.1em}{}
-\titleformat{\subsection}[runin]{\normalfont\large\bfseries}{\thesubsection}{0.1em}{}
+\titleformat{\section}{\raggedright\scshape\huge\color{mycolor}}{\thesection}{0.1em}{}
+\titleformat{\subsection}[runin]{\normalfont\Large\bfseries}{\thesubsection}{0.1em}{}
+
 
 \begin{document}
+
 \noindent
-\section*{Scholastic Achievements}
-    \begin{itemize}
+\section*{{Scholastic Achievements}\xfill[0pt]{0.5pt}}
+\vspace{-10pt}
+    \begin{itemize}[itemsep=-0.6mm, leftmargin=18pt]
         \item Secured \textbf{All India Rank-762} in \textit{JEE-Advanced}. \hfill ('20)
         \item Obtained a \textbf{Percentile Score of 99.76} in \textit{JEE-Mains}. \hfill ('20)
         \item Awarded \textit{Kishore Vagyanik Protsahan Yojana(KVPY)} fellowship for \textbf{All India Rank 200} by \textbf{Indian Institute of Science(IISC)}  under SX-Stream. \hfill ('20)
+        \item Qualified for INO ny IAPT.
+        \item Qualified for NTSE Stage-I.
+        \item Awarded Annual Excellence Award owing to excellence in academics.
     \end{itemize}
+\vspace{-4pt}
 
-\section*{Academic Projects}
+\section*{{Academic Projects}\xfill[0pt]{0.5pt}}
+\vspace{-10pt}
     \subsection*{Game Development in C++} $|$ Course Project \hfill (Jan '21 - Feb' 21) \\
     Guide: Prof. Bhaskaran Raman, Departement of Computer Science \& Engineering 
-    \begin{itemize}
+    \begin{itemize}[itemsep=-0.6mm, leftmargin=18pt]
         \item Utilized a basic template of a game 'Lasso' to enhance the feature set.
+        \item Added Multiplayer support in the Game.
         \item Learned basic aspects of Object Oriented Programming.
     \end{itemize}
     
-\section*{Technical Skills}
+    \subsection*{E-yantra}
+\vspace{-4pt}
+
+\section*{{Technical Skills}\xfill[0pt]{0.5pt}}
+\vspace{-10pt}
     \begin{tabular}{p{4.6cm} p{11.9cm}}
     \textbf{Languages}        & C/C++. Python, Java, Bash, VHDL(Hardware Desciption)  \\
     
-    \textbf{Softwares}        & Git, \LaTeX, Markdown, Android SDK, GNU Radio \\
+    \textbf{Softwares}        & Git, \LaTeX, Markdown, Android SDK, GNU Radio, Arduino IDE  \\
     
     \textbf{Development}      & HTML,CSS,Javascript \\
     
     \end{tabular}
+\vspace{-4pt}
 
-\section*{Key Courses\textit{\small(*Ongoing)} }
-
+\section*{{Key Courses\textit{\small(*Ongoing)}}\xfill[0pt]{0.5pt} }
+\vspace{-10pt}
     \begin{tabular}{p{4.6cm} p{11.9cm}}
     \textbf{Physics}          & Quantum Physics and Appliactions, Basics of Electricity And Magnetism                                       \\
     
@@ -90,15 +84,28 @@
     \textbf{Misc.}            & Engineering Graphics \& Drawings, Biology, Economics\textbf{*}             \\                                                                                           
     \end{tabular}
 
-    \newpage
-\section*{Extra-Curricular Activities}
+\vspace{-4pt}
+
+\section*{{Extra-Curricular Activities}\xfill[0pt]{0.5pt}}
+\vspace{-10pt}
         \subsection*{Student Volunteer} $|$ NSS IIT Bombay \hfill (Nov '20-July '21)
-        Sustainable Social Development Volunteer
-        \begin{itemize}
-            \item Created Blog posts and a series of whiteboard animations to spread knowledge and awarness on many issues. 
+        Sustainable Social Development Volunteer, Largest Student Volunteer working in the field of social service in IIT Bombay
+        \begin{itemize}[itemsep=-0.6mm, leftmargin=18pt]
+            \item Created Blog posts and 
+            \item a series of whiteboard animations to spread knowledge and awarness on many issues. 
             \item Overall Winners amongst 16 teams participated in Debate Competition conducted over a course of a month. \hfill (May '21 - June '21)
+        
         \end{itemize}
     
+    \begin{itemize}[itemsep=-0.6mm, leftmargin=18pt]
+        \item Volunteered for in class 7th donation collction and distribution to underpriveged children.
+        \item Vidhyarthi vigyan manthan
+        \item Door counter arduino.
+        \item IBM Certificate.
+        \item Received special mention Origami Competition for making a trapezium.
+        \item Attended a one-day workshop at Forest Reseech INstitue, Dehradun.
+        \item  
+    \end{itemize}    
     \thispagestyle{empty}
     \clearpage
 \end{document}
